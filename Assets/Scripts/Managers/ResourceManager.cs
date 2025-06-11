@@ -20,7 +20,7 @@ public class ResourceManager
         }
 
         operation = Addressables.LoadAssetAsync<T>(key);
-        operation.Completed += Result => onComplete?.Invoke(Result as T);
+        operation.Completed += op => onComplete?.Invoke(op.Result as T);
         _operations.TryAdd(key, operation);
         return operation;
     }
