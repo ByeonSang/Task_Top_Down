@@ -5,14 +5,11 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private SpriteRenderer spr;
     [SerializeField] private float _moveSpeed;
 
     private PlayerAC _playerAC;
     private Vector2 _dir;
-
-    private bool _isRight = true;
-    private int _facingDir = 1;
-
     
     public Vector2 Dir
     {
@@ -65,9 +62,11 @@ public class Player : MonoBehaviour
     {
         if(x != 0f)
         {
-            Quaternion newQuater = transform.rotation;
+            spr.flipX = x < 0f;
+            isRight = !spr.flipX;
+            /*È¸Àü Quaternion newQuater = transform.rotation;
             newQuater = Quaternion.Euler(0f, (x>0f) ? 0 : 180f, 0f);
-            transform.rotation = newQuater;
+            transform.rotation = newQuater;*/
         }
     }
 }
