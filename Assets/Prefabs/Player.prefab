@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e0ab8bfe56b154bae326f076d2ed8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spr: {fileID: 3926652931864315934}
   _moveSpeed: 5
 --- !u!1 &7271253758340820116
 GameObject:
@@ -56,6 +57,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4754898791323227323}
   - component: {fileID: 3926652931864315934}
+  - component: {fileID: 8028628861390621363}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -130,3 +132,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8028628861390621363
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7271253758340820116}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3d39d0b74fb3fec448636c0b736e00a2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -5,9 +5,11 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer spr;
+    private SpriteRenderer _spr;
+    private Animator _anim;
     [SerializeField] private float _moveSpeed;
 
+    private PlayerAnimData _animData;
     private PlayerAC _playerAC;
     private Vector2 _dir;
     
@@ -24,7 +26,7 @@ public class Player : MonoBehaviour
 
     // ** Facing **
     public bool isRight { get; private set; } = true;
-
+    public PlayerAnimData AnimData => _animData;
 
     private void Awake()
     {
@@ -33,6 +35,11 @@ public class Player : MonoBehaviour
         _playerAC.Player.Move.performed += context => Dir = context.ReadValue<Vector2>();
         _playerAC.Player.Move.canceled += context => Dir = Vector2.zero;
         #endregion
+
+        _spr = GetComponentInChildren<SpriteRenderer>();
+        _anim = GetComponentInChildren<Animator>();
+
+        _animData = new(_anim, this);
 
         Center = GetComponentInChildren<SpriteRenderer>().transform;
     }
@@ -45,6 +52,11 @@ public class Player : MonoBehaviour
     private void OnDisable()
     {
         _playerAC.Disable();
+    }
+
+    private void Update()
+    {
+        AnimData.Update();
     }
 
     private void FixedUpdate()
@@ -62,8 +74,8 @@ public class Player : MonoBehaviour
     {
         if(x != 0f)
         {
-            spr.flipX = x < 0f;
-            isRight = !spr.flipX;
+            _spr.flipX = x < 0f;
+            isRight = !_spr.flipX;
             /*È¸Àü Quaternion newQuater = transform.rotation;
             newQuater = Quaternion.Euler(0f, (x>0f) ? 0 : 180f, 0f);
             transform.rotation = newQuater;*/
