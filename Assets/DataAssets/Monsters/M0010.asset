@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28b229692b273e24e90c49d9d3b269ae, type: 3}
+  m_Name: M0010
+  m_EditorClassIdentifier: 
+  _monsterData:
+    MonsterID: M0010
+    Name: "\uD638\uB791\uC774"
+    Description: "\uB5A1 \uD558\uB098 \uC8FC\uBA74 \uC548 \uC7A1\uC544 \uBA39\uB294\uB2E4"
+    Attack: 20
+    AttackMul: 0.1
+    MaxHP: 150
+    MaxHPMul: 0.1
+    AttackRange: 5
+    AttackRangeMul: 0.2
+    AttackSpeed: 1.4
+    MoveSpeed: 5
+    MinExp: 19
+    MaxExp: 38
+    DropItem: 214e000033750000

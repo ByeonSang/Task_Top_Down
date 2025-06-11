@@ -7,9 +7,13 @@ public class Managers : MonoBehaviour
     private static Managers instance;
     // Member Variable
     private static readonly ObjectPoolManager _objectPool = new();
+    private static readonly ResourceManager _resource = new();
+    private static readonly DataManager _data = new();
 
     // Property
     public static ObjectPoolManager ObjectPool => _objectPool;
+    public static ResourceManager Resource => _resource;
+    public static DataManager Data => _data;
 
     private void Awake()
     {
@@ -21,6 +25,6 @@ public class Managers : MonoBehaviour
         else
         {
             Destroy(this.gameObject);
-        } 
+        }
     }
 }
