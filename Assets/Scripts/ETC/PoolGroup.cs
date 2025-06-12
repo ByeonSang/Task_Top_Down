@@ -9,10 +9,10 @@ public class PoolGroup
 
     private Queue<Poolable> _pool = new();
 
-    public Transform Transform { get; }
+    public Transform Transform { get; private set; }
 
-    public bool IsFull => (Transform.transform.childCount == _maxLength);
-
+    public bool IsFull => (Transform.childCount == _maxLength);
+    public int Count => Transform.childCount;
     public PoolGroup(GameObject groupGo)
     {
         Transform = groupGo.transform;

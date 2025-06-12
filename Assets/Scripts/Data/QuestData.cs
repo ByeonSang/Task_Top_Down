@@ -24,6 +24,8 @@ public class QuestData : DataBase
 
     public override string KeyName => Name;
 
+    public QuestData() { }
+
     public QuestData(QuestData other)
     {
         if (other == null)

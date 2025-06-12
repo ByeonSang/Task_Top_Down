@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Linq;
 using UnityEngine;
 
 public class ObjectPoolManager
@@ -25,7 +26,7 @@ public class ObjectPoolManager
             return group;
         }
 
-        return null;
+        return CreateGroup(key);
     }
 
     private PoolGroup CreateGroup(string name)

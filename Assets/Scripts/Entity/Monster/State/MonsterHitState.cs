@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterRunState : MonsterStateBase
+public class MonsterHitState : MonsterStateBase
 {
-    public MonsterRunState(StateMachine stateMachine, Animator anim, int animName, MonsterController monster, MonsterAnimData animData) : base(stateMachine, anim, animName, monster, animData)
+    public MonsterHitState(StateMachine stateMachine, Animator anim, int animName, MonsterController monster, MonsterAnimData animData) : base(stateMachine, anim, animName, monster, animData)
     {
     }
 

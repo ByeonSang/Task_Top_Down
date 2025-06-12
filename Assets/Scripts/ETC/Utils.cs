@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Utils
 {
+    public static float CorrectionValue = 19f; // 보정 스칼라값
     public static void Log(string message)
     {
 #if UNITY_EDITOR
@@ -24,4 +25,5 @@ public class Utils
         Debug.LogError(message);
 #endif
     }
+
 }

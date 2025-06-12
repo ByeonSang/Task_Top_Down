@@ -13,52 +13,16 @@ public class ResourceManager
     private Dictionary<string, Stack<string>> _keys = new();
     public AsyncOperationHandle LoadAssetsAsync<T>(string key, Action<T> onComplete = null) where T : Object
     {
-        if(_operations.TryGetValue(key, out var operation))
+        /*if(_operations.TryGetValue(key, out var operation))
         {
             onComplete?.Invoke(operation.Result as T);
             return operation;
-        }
+        }*/
 
-        operation = Addressables.LoadAssetAsync<T>(key);
+        var operation = Addressables.LoadAssetAsync<T>(key);
         operation.Completed += op => onComplete?.Invoke(op.Result as T);
-        _operations.TryAdd(key, operation);
+        //_operations.TryAdd(key, operation);
         return operation;
-    }
-
-    public void Instantiate(string key, Action<GameObject> onComplete = null)
-    {
-        PoolGroup group = Managers.ObjectPool.GetGroup(key);
-
-        if (group != null)
-        {
-            if(group.IsFull == false)
-            {
-                GameObject poolGO = group.Get(key);
-
-                if (poolGO == null)
-                {
-                    var operation = LoadAssetsAsync<GameObject>(key);
-                    GameObject prefab = operation.Result as GameObject;
-                    poolGO = Instantiate(prefab);
-                    poolGO.transform.parent = group.Transform;
-                }
-                
-                onComplete?.Invoke(poolGO);
-            }
-            else
-            {
-                Utils.Log("Failed to add group because it is full");
-            }
-        }
-
-        
-    }
-
-    private GameObject Instantiate(GameObject prefab)
-    {
-        GameObject go = Object.Instantiate(prefab);
-        go.name = prefab.name;
-        return go;
     }
 
     public void Destroy(GameObject go)

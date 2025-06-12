@@ -25,6 +25,8 @@ public class ItemData : DataBase
 
     public override string KeyName => Name;
 
+    public ItemData() { }
+
     public ItemData(ItemData other)
     {
         if (other == null)

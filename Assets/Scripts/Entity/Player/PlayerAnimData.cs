@@ -15,7 +15,7 @@ public class PlayerAnimData
     public PlayerRunState RunState => _runState;
     private int ConvertHash(string name) => Animator.StringToHash(name);
 
-    public PlayerAnimData(Animator anim, Player player)
+    public PlayerAnimData(Animator anim, PlayerController player)
     {
         _stateMachine = new();
 

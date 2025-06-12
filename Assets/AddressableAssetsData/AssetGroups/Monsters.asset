@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Monsters
   m_Data:
     m_SerializedData: []
-  m_GUID: 750c22a57188f4044b824f0bb460e04f
+  m_GUID: 9cf7e5c2921d1904bab177c082caddcb
   m_SerializeEntries:
   - m_GUID: 28d44f7a6a44e034c9ff9cfe6c4b559c
     m_Address: M0001

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private SpriteRenderer _spr;
     private Animator _anim;
@@ -38,15 +38,15 @@ public class Player : MonoBehaviour
 
         _spr = GetComponentInChildren<SpriteRenderer>();
         _anim = GetComponentInChildren<Animator>();
-
-        _animData = new(_anim, this);
-
-        Center = GetComponentInChildren<SpriteRenderer>().transform;
     }
 
-    private void OnEnable()
+    public void Init()
     {
         _playerAC.Enable();
+        _animData = new(_anim, this);
+        Center = GetComponentInChildren<SpriteRenderer>().transform;
+
+        transform.position = Vector2.zero;
     }
 
     private void OnDisable()

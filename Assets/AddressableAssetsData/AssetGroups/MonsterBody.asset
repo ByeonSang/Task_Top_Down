@@ -10,20 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Default Local Group
+  m_Name: MonsterBody
   m_EditorClassIdentifier: 
-  m_GroupName: Default Local Group
+  m_GroupName: MonsterBody
   m_Data:
     m_SerializedData: []
-  m_GUID: edde0f1f9a3271f42927742f8af89769
+  m_GUID: 9b5a9879555105d419b40ca3b966d09d
   m_SerializeEntries:
-  - m_GUID: 3b9712406b4ac6b45bb9c5fe2dc383bb
-    m_Address: MonsterBrain
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 79e3dfc9aeabe9a4c9337b7108c0d344
-    m_Address: Player
+  - m_GUID: b6ae8feb1b7d8cb4ca9591bb01b3f303
+    m_Address: M0001_Body
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -31,5 +26,5 @@ MonoBehaviour:
   m_Settings: {fileID: 11400000, guid: c862de7e38157ff41b95da646ce0eb73, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: d2b4d19350fe246458e5863b34748df5, type: 2}
-    - {fileID: 11400000, guid: fcf89f247c794f84f8a59612ba68e18c, type: 2}
+    - {fileID: 11400000, guid: 78114239d9d62c844b50c6774e1da697, type: 2}
+    - {fileID: 11400000, guid: f8eba5dcf5ad7e54795eb23a45ff59d6, type: 2}

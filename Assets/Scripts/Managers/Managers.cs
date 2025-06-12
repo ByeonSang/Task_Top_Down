@@ -9,11 +9,13 @@ public class Managers : MonoBehaviour
     private static readonly ObjectPoolManager _objectPool = new();
     private static readonly ResourceManager _resource = new();
     private static readonly DataManager _data = new();
+    private static readonly GameManager _game = new();
 
     // Property
     public static ObjectPoolManager ObjectPool => _objectPool;
     public static ResourceManager Resource => _resource;
     public static DataManager Data => _data;
+    public static GameManager Game => _game;
 
     private void Awake()
     {
@@ -26,5 +28,7 @@ public class Managers : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        _game.Init();
     }
 }

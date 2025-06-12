@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Items
   m_Data:
     m_SerializedData: []
-  m_GUID: dc2213aefd1e95e4e85821d814d77c20
+  m_GUID: 9fdcd0810eb47554cb1a9cb939c8f1f9
   m_SerializeEntries:
   - m_GUID: 88b008e397492e24fad9da951839cf09
     m_Address: 10000

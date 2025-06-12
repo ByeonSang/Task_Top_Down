@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerStateBase : EntityStateBase
 {
-    protected Player player;
+    protected PlayerController player;
     protected PlayerAnimData animData;
 
-    public PlayerStateBase(StateMachine stateMachine, Animator anim, int animName, Player player, PlayerAnimData animData) : base(stateMachine, anim, animName)
+    public PlayerStateBase(StateMachine stateMachine, Animator anim, int animName, PlayerController player, PlayerAnimData animData) : base(stateMachine, anim, animName)
     {
         this.player = player;
         this.animData = animData;
