@@ -24,26 +24,29 @@ public class MonsterData : DataBase
 
     public MonsterData() { }
 
-    public MonsterData(MonsterData data)
+    public MonsterData(MonsterData other)
     {
-        MonsterID = data.MonsterID;
-        Name = data.Name;
-        Description = data.Description;
-        Attack = data.Attack;
-        AttackMul = data.AttackMul;
-        MaxHP = data.MaxHP;
-        MaxHPMul = data.MaxHPMul;
-        AttackRange = data.AttackRange;
-        AttackRangeMul = data.AttackRangeMul;
-        AttackSpeed = data.AttackSpeed;
-        MoveSpeed = data.MoveSpeed;
-        MinExp = data.MinExp;
-        MaxExp = data.MaxExp;
+        if (other == null)
+            return;
 
-        DropItem = new int[data.DropItem.Length];
+        MonsterID = other.MonsterID;
+        Name = other.Name;
+        Description = other.Description;
+        Attack = other.Attack;
+        AttackMul = other.AttackMul;
+        MaxHP = other.MaxHP;
+        MaxHPMul = other.MaxHPMul;
+        AttackRange = other.AttackRange;
+        AttackRangeMul = other.AttackRangeMul;
+        AttackSpeed = other.AttackSpeed;
+        MoveSpeed = other.MoveSpeed;
+        MinExp = other.MinExp;
+        MaxExp = other.MaxExp;
+
+        DropItem = new int[other.DropItem.Length];
         for(int i =0; i< DropItem.Length; i++)
         {
-            DropItem[i] = data.DropItem[i];
+            DropItem[i] = other.DropItem[i];
         }
     }
 

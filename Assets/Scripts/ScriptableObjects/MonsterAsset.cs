@@ -3,15 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Create/MonsterAsset", fileName = "Monster Asset")]
-public class MonsterAsset : ScriptableObject
+public class MonsterAsset : DataAsset<MonsterData>
 {
     [SerializeField] private MonsterData _monsterData;
 
-    public MonsterData Data {
-        get => _monsterData;  
-        set
-        {
-            _monsterData = new(value);
-        }
-    }
+    public override MonsterData Data { get => _monsterData; set => _monsterData = new(value); }
 }

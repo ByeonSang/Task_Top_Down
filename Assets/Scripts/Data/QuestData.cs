@@ -1,7 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
+[Serializable]
 public class QuestData : DataBase
 {
     public string QuestID;
@@ -20,4 +23,23 @@ public class QuestData : DataBase
     public override string Key => QuestID;
 
     public override string KeyName => Name;
+
+    public QuestData(QuestData other)
+    {
+        if (other == null)
+            return;
+
+        QuestID = other.QuestID;
+        Name = other.Name;
+        Type = other.Type;
+        NPC = other.NPC;
+        Goal = other.Goal;
+        Description = other.Description;
+        PriorID = other.PriorID;
+        GoalID = other.GoalID;
+        Exp = other.Exp;
+        Gold = other.Gold;
+        Clear = other.Clear;
+        Reward = other.Reward;
+    }
 }

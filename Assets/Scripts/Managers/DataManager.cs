@@ -6,17 +6,11 @@ using UnityEngine;
 
 public class DataManager
 {
-    private const string MonsterJson = "Json/MonsterJson";
-    private const string ItemJson = "Json/ItemJson";
-    private const string QuestJson = "Json/QuestJson";
-
     private Dictionary<string, List<DataBase>> _datas = new();
 
-    public void Load()
+    public void Load<T>(string path) where T : DataBase
     {
-        JsonDeserialize<MonsterData>(MonsterJson);
-        JsonDeserialize<ItemData>(ItemJson);
-        JsonDeserialize<QuestData>(QuestJson);
+        JsonDeserialize<T>(path);
     }
 
     private void JsonDeserialize<T>(string path) where T : DataBase

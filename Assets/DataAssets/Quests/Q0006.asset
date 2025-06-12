@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb166d3251c1d5468c14b45aa210faf, type: 3}
+  m_Name: Q0006
+  m_EditorClassIdentifier: 
+  _questData:
+    QuestID: Q0006
+    Name: "\uC218\uC9D1\uAC00\uC758 \uBD80\uD0C1 (2)"
+    Type: 3
+    NPC: 0
+    Goal: 5
+    Description: "\uCC38\uC0C8 \uAE43\uD138 5\uAC1C\uB97C \uC218\uC9D1\uD558\uC138\uC694"
+    PriorID: 0
+    GoalID: 1
+    Exp: 100
+    Gold: 500
+    Clear: 0
+    Reward: 0
